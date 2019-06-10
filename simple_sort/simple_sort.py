@@ -2,11 +2,9 @@
 
 def simple_sort(slist):
     for i in range(len(slist)):
-        for j in range(len(slist[i+1::])):
-            if slist[i] > slist[i+1::][j]:
-                tmp = slist[i]
-                slist[i] = slist[i+1+j]
-                slist[i+1+j] = tmp
+        for j in range(i + 1, len(slist)):
+            if slist[i] > slist[j]:
+                slist[i], slist[j] = slist[j], slist[i]
     return slist
 
 
